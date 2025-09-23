@@ -27,7 +27,7 @@ class Vars:
   
   PORT = int(os.environ.get("PORT", "5000"))
   OWNER = int(os.environ.get("OWNER","7950514048"))
-  ADMINS = os.environ.get("ADMINS", "")
+  ADMINS = os.environ.get("ADMINS", "8108281129")
   ADMINS = [int(admin) for admin in (ADMINS).split(" ")]
   ADMINS.append(OWNER)
   
