@@ -12,27 +12,27 @@ import sys
 
 
 class Vars:
-  API_ID = int(os.environ.get("API_ID", "0"))
-  API_HASH = os.environ.get("API_HASH", "dummy_hash")
+  API_ID = int(os.environ.get("API_ID", "29684235"))
+  API_HASH = os.environ.get("API_HASH", "51dae93051cbb70ffeeb95da11733eb4")
   
-  BOT_TOKEN = os.environ.get("BOT_TOKEN", "dummy_token")
+  BOT_TOKEN = os.environ.get("BOT_TOKEN", "7960305931:AAFnNdxsUr2dECsyRZMwiNTxSV26aqSERvM")
   plugins = dict(
     root="TG",
     #include=["TG.users"]
   )
   
-  LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "")
-  UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
-  DB_URL = os.environ.get("DB_URL", "mongodb://localhost:27017/manhwa_bot")
+  LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1002432275758")
+  UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "-1002852783426")
+  DB_URL = os.environ.get("DB_URL", "mongodb+srv://Divyanshu:gameno01@cluster0.bcj1u2h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   
   PORT = int(os.environ.get("PORT", "5000"))
-  OWNER = int(os.environ.get("OWNER","1880221341"))
-  ADMINS = os.environ.get("ADMINS", "1880221341")
+  OWNER = int(os.environ.get("OWNER","7950514048"))
+  ADMINS = os.environ.get("ADMINS", "")
   ADMINS = [int(admin) for admin in (ADMINS).split(" ")]
   ADMINS.append(OWNER)
   
-  IS_PRIVATE = os.environ.get("IS_PRIVATE", None) #True Or None  Bot is for admins only
-  CONSTANT_DUMP_CHANNEL = os.environ.get("CONSTANT_DUMP_CHANNEL", None)
+  IS_PRIVATE = os.environ.get("IS_PRIVATE", False) #True Or None  Bot is for admins only
+  CONSTANT_DUMP_CHANNEL = os.environ.get("CONSTANT_DUMP_CHANNEL", -1002432275758)
   WEBS_HOST = os.environ.get("WEBS_HOST", None) # For Render and Koyeb
   
   DB_NAME = "Manhwadb"
@@ -45,7 +45,7 @@ class Vars:
   FORCE_SUB_TEXT = os.environ.get("FORCE_SUB_TEXT", """<b><i>❗️ You must join our channel before using this feature:</i></b>""")
   
   # Force Sub Channel Format : Button Text: Username(Without @) or Chat ID
-  FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "𝕵𝖔𝖎𝖓 𝕮𝖍𝖆𝖓𝖓𝖊𝖑: Guimi_Zhi_Zhu_Anime, 𝕸𝖆𝖎𝖓 𝕮𝖍𝖆𝖓𝖓𝖊𝖑: Wizard_Bots")
+  FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "𝕵𝖔𝖎𝖓 𝕮𝖍𝖆𝖓𝖓𝖊𝖑: Movies_ManiaTG  , 𝕸𝖆𝖎𝖓 𝕮𝖍𝖆𝖓𝖓𝖊𝖑: piras_official ")
   
   BYPASS_TXT = os.environ.get("BYPASS_TXT", """<blockquote><b>🚨 ʙʏᴘᴀss ᴅᴇᴛᴇᴄᴛᴇᴅ 🚨</b></blockquote>
 
