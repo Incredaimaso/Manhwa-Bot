@@ -32,7 +32,7 @@ class Vars:
   ADMINS.append(OWNER)
   
   IS_PRIVATE = os.environ.get("IS_PRIVATE", False) #True Or None  Bot is for admins only
-  CONSTANT_DUMP_CHANNEL = os.environ.get("CONSTANT_DUMP_CHANNEL", -1002432275758)
+  CONSTANT_DUMP_CHANNEL = os.environ.get("CONSTANT_DUMP_CHANNEL", -1002385209883)
   WEBS_HOST = os.environ.get("WEBS_HOST", None) # For Render and Koyeb
   
   DB_NAME = "Manhwadb"
@@ -40,7 +40,7 @@ class Vars:
   
   SHORTENER = os.environ.get("SHORTENER", None)
   SHORTENER_API = os.environ.get("SHORTENER_API", "") # put {} for url, ex: shornter.api?url={}
-  DURATION = int(os.environ.get("DURATION", "20")) # hrs
+  DURATION = int(os.environ.get("DURATION", "12")) # hrs
   
   FORCE_SUB_TEXT = os.environ.get("FORCE_SUB_TEXT", """<b><i>❗️ You must join our channel before using this feature:</i></b>""")
   
@@ -249,8 +249,8 @@ class Manhwa_Bot(pyrogram.Client, Vars):
 
     """)
     self.username = usr_bot_me.username
-    self.logger.info("Make By https://t.me/Wizard_Bots ")
-    self.logger.info(f"Manhwa Bot Started as {usr_bot_me.first_name} | @{usr_bot_me.username}")
+    self.logger.info("Make By https://t.me/Piras_official ")
+    self.logger.info(f" Bot has been Started as {usr_bot_me.first_name} | @{usr_bot_me.username}")
 
     if self.WEBS_HOST:
       await run_flask()
