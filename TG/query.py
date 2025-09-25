@@ -100,7 +100,7 @@ Pricing Rates
   12 Months - 1000 inr / 11.8 USD / NRS 1400
 
 Want To Buy ?!
-  Contact or DM - @Shanks_Kun
+  Contact or DM - @LinesOrThreads
 
 We Have Limited Seats For Premium Users</i></b>"""
   try:
