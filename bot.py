@@ -12,27 +12,27 @@ import sys
 
 
 class Vars:
-  API_ID = int(os.environ.get("API_ID", "29684235"))
-  API_HASH = os.environ.get("API_HASH", "51dae93051cbb70ffeeb95da11733eb4")
+  API_ID = int(os.environ.get("API_ID", "0"))
+  API_HASH = os.environ.get("API_HASH", "dummy_hash")
   
-  BOT_TOKEN = os.environ.get("BOT_TOKEN", "7960305931:AAFnNdxsUr2dECsyRZMwiNTxSV26aqSERvM")
+  BOT_TOKEN = os.environ.get("BOT_TOKEN", "dummy_token")
   plugins = dict(
     root="TG",
     #include=["TG.users"]
   )
   
-  LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1002432275758")
-  UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "-1002852783426")
-  DB_URL = os.environ.get("DB_URL", "mongodb+srv://Divyanshu:gameno01@cluster0.bcj1u2h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+  LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "")
+  UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
+  DB_URL = os.environ.get("DB_URL", "mongodb://localhost:27017/manhwa_bot")
   
   PORT = int(os.environ.get("PORT", "5000"))
-  OWNER = int(os.environ.get("OWNER","7950514048"))
-  ADMINS = os.environ.get("ADMINS", "8108281129")
+  OWNER = int(os.environ.get("OWNER","1880221341"))
+  ADMINS = os.environ.get("ADMINS", "1880221341")
   ADMINS = [int(admin) for admin in (ADMINS).split(" ")]
   ADMINS.append(OWNER)
   
-  IS_PRIVATE = os.environ.get("IS_PRIVATE", False) #True Or None  Bot is for admins only
-  CONSTANT_DUMP_CHANNEL = os.environ.get("CONSTANT_DUMP_CHANNEL", -1002385209883)
+  IS_PRIVATE = os.environ.get("IS_PRIVATE", None) #True Or None  Bot is for admins only
+  CONSTANT_DUMP_CHANNEL = os.environ.get("CONSTANT_DUMP_CHANNEL", None)
   WEBS_HOST = os.environ.get("WEBS_HOST", None) # For Render and Koyeb
   
   DB_NAME = "Manhwadb"
@@ -40,12 +40,12 @@ class Vars:
   
   SHORTENER = os.environ.get("SHORTENER", None)
   SHORTENER_API = os.environ.get("SHORTENER_API", "") # put {} for url, ex: shornter.api?url={}
-  DURATION = int(os.environ.get("DURATION", "12")) # hrs
+  DURATION = int(os.environ.get("DURATION", "20")) # hrs
   
   FORCE_SUB_TEXT = os.environ.get("FORCE_SUB_TEXT", """<b><i>❗️ You must join our channel before using this feature:</i></b>""")
   
   # Force Sub Channel Format : Button Text: Username(Without @) or Chat ID
-  FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "𝕵𝖔𝖎𝖓 𝕮𝖍𝖆𝖓𝖓𝖊𝖑: Movies_ManiaTG  , 𝕸𝖆𝖎𝖓 𝕮𝖍𝖆𝖓𝖓𝖊𝖑: piras_official ")
+  FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "𝕵𝖔𝖎𝖓 𝕮𝖍𝖆𝖓𝖓𝖊𝖑: Guimi_Zhi_Zhu_Anime, 𝕸𝖆𝖎𝖓 𝕮𝖍𝖆𝖓𝖓𝖊𝖑: Wizard_Bots")
   
   BYPASS_TXT = os.environ.get("BYPASS_TXT", """<blockquote><b>🚨 ʙʏᴘᴀss ᴅᴇᴛᴇᴄᴛᴇᴅ 🚨</b></blockquote>
 
@@ -249,8 +249,8 @@ class Manhwa_Bot(pyrogram.Client, Vars):
 
     """)
     self.username = usr_bot_me.username
-    self.logger.info("Make By https://t.me/Piras_official ")
-    self.logger.info(f" Bot has been Started as {usr_bot_me.first_name} | @{usr_bot_me.username}")
+    self.logger.info("Make By https://t.me/Wizard_Bots ")
+    self.logger.info(f"Manhwa Bot Started as {usr_bot_me.first_name} | @{usr_bot_me.username}")
 
     if self.WEBS_HOST:
       await run_flask()
@@ -260,10 +260,10 @@ Sleep mode deactivated. Neural cores at 100%. Feed me tasks, and watch magic hap
 
     PICS = random.choice(Vars.PICS)
 
-    button = [
+    button = [[
       InlineKeyboardButton('*Start Now*', url= f"https://t.me/{usr_bot_me.username}?start=start"),
-      InlineKeyboardButton("*Channel*", url = "https://piras_official.t.me")
-     ]
+      InlineKeyboardButton("*Channel*", url = "telegram.me/Wizard_Bots")
+    ]]
 
     try: await self.send_photo(self.UPDATE_CHANNEL, photo=PICS, caption=MSG, reply_markup=InlineKeyboardMarkup(button))
     except: pass
